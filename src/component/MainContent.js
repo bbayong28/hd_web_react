@@ -13,7 +13,7 @@ const MainContent = () => {
                 {
                     CONTENT.map(content => {
                         return (
-                            <figure>
+                            <figure key={content.id}>
                                 <div className="box">
                                     <img src={process.env.PUBLIC_URL + "/assets/images/section1_" + content.id + ".jpg"} alt="" />
                                 </div>
