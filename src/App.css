@@ -12,6 +12,42 @@
   margin: 0 auto;
 }
 
+.cbtn {
+  display: inline-block;
+  padding: 15px 25px;
+  border: 1px solid var(--mc);
+  color: var(--mc);
+  font-size: 13px;
+  background: #ffffff;
+}
+
+.cbtn::after {
+  content: "\e93e";
+  font-family: xeicon;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 10px;
+  vertical-align: 1px;
+}
+
+.csc {
+  position: relative;
+  padding: 100px 0;
+}
+
+.csc h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.csc p {
+  font-size: 15px;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
 .TopBanner {
   background: var(--mc);
   color: var(--lc);
@@ -47,7 +83,7 @@
 }
 
 .Header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -224,8 +260,9 @@
 
 .MainVisual {
   position: relative;
-  padding: 155px 0 0 0;
   color: var(--lc);
+  transform: translateY(-100px);
+  height: calc(100vh - 255px);
 }
 
 .MainVisual figure {
@@ -260,6 +297,21 @@
   transform: translate(-50%, -50%);
 }
 
+.MainVisual .tit {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  text-shadow: 0 0 2px var(--dc);
+  white-space: pre;
+}
+
+.MainVisual .des {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+  text-shadow: 0 0 1px var(--dc);
+}
+
 .MainVisual .slick-track,
 .MainVisual .slick-slide {
   transition-duration: 5ms;
@@ -280,6 +332,30 @@
   margin: 0 0 0 600px;
 }
 
+.MainVisual .slideTab li {
+  text-align: right;
+  margin: 10px 0;
+  font-size: 0;
+}
+
+.MainVisual .slideTab li.on {
+  font-size: 15px;
+}
+
+.MainVisual .slideTab li::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--lc);
+  margin: 0 0 0 15px;
+  vertical-align: middle;
+}
+
+.MainVisual .slideTab li.on::after {
+  background: var(--lc);
+}
+
 .MainVisual .slideArrows button {
   position: absolute;
   top: 50%;
@@ -288,16 +364,67 @@
   background: transparent;
   border: none;
   color: var(--lc);
-  font-size: 50px;
+  font-size: 30px;
   padding: 30px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   line-height: 1;
+  border-radius: 50%;
 }
 
 .MainVisual .slideArrows button:first-child {
-  margin: 0 0 0 -700px;
+  margin: 0 0 0 -800px;
 }
 
 .MainVisual .slideArrows button:last-child {
-  margin: 0 0 0 700px;
+  margin: 0 0 0 800px;
+}
+
+.MainContent .inner {
+  display: flex;
+}
+
+.MainContent .inner>figure {
+  flex: 1;
+  text-align: center;
+}
+
+.MainContent figure img {
+  transition: 0.5s;
+}
+
+.MainContent figure:hover img {
+  transform: scale(1.2);
+}
+
+.MainContent .box {
+  margin: 0 0 40px 0;
+  overflow: hidden;
+}
+
+.MainContent .tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.MainContent .tit::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 40px;
+  background: var(--mc);
+}
+
+.MainContent .dec {
+  font-size: 15px;
+  margin: 0 0 30px 0;
+  line-height: 1.45;
+  /* white-space: pre-line; */
+  display: inline-block;
+  width: 70%;
+  min-height: 50px;
+  word-break: keep-all;
 }
