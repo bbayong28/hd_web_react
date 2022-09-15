@@ -510,3 +510,137 @@
     width: 400px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
+
+.Solution {
+  background: var(--lc);
+}
+
+.Solution .container{
+  position: relative;
+}
+
+.Solution .box{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin: 0 0 0 -540px;
+  width: 300px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2) ;
+  background: #fff;
+  padding: 50px 40px;
+}
+
+.Solution .box::after{
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: -20px;
+  width: 40px;
+  height: 2px;
+  background: var(--mc);
+}
+
+.Solution .box .tit{
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.Solution .box p{
+  font-size: 15px;
+  font-weight: 300;
+  min-height: 120px;
+  text-align: left;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.Solution .num{
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--mc);
+}
+
+.Solution .num span{
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--dc);
+}
+
+.Solution .arrows i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: var(--lc);
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Solution .arrows i:first-child{
+  margin: 0 0 0 -600px;
+}
+.Solution .arrows i:last-child{
+  margin: 0 0 0 600px;
+}
+
+.Solution  .dots{
+  text-align: center;
+  font-size: 0;
+  height: 30px;
+}
+
+.Solution  .dots>li{
+  display: inline-block;
+  width: 4px;
+  height: 10px;
+  background: var(--gc);
+  margin: 10px;
+  vertical-align: middle;
+  transition: 0.5s;
+}
+
+.Solution  .dots>li.on{
+  height: 30px;
+  background: var(--mc);
+}
+
+.Solution .box .content{
+  margin-bottom: 40px;
+}
+
+.Solution .solution_slide figure{
+  width: 1200px;
+  filter: grayscale(1) brightness(1.5);
+}
+
+.Solution .solution_slide figure.on{
+   filter: grayscale(0) brightness(1);
+   transition: 0.5s;
+}
+
+.Solution .solution_slide figure img{
+  margin: 0 auto;
+}
+
+.Promotion{
+  background: url(../public/assets/images/section4_bg.jpg) no-repeat left bottom;
+}
+
+.Promotion .movie{
+  position: relative;
+  width: 800px;
+  height: 450px;
+  margin: 0 auto;
+
+}
+
+.Promotion .movie .u{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+}
