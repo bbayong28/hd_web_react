@@ -14,6 +14,10 @@ const PTF = [
     { id:9, title:"명동 대신증권 신사옥" },
 ]
 
+// const a = PTF.slice(0, 1);
+// const b = PTF.slice(1, 9);
+// const NPTF = b.concat(a);
+
 
 const NPTF = [
     { id:2, title:"LG U+ 신사옥" },
