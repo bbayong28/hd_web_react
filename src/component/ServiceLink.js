@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const SERVICE = [
     {
@@ -34,13 +34,17 @@ const SERVICE = [
 const ServiceLink = () => {
     const [slink, setSlink] = useState();
     const [swc, setSwc] = useState(false);
+    useEffect(()=> {
+    setSwc(true)
+},  [slink])  // [slink] : 의존성배열
     return (
         <ul className='ServiceLink'>
             {
                 SERVICE.map((link, idx) => {
                     return (
                         <li key={link.id}>
-                            <div className={"title " + ((slink === idx && swc) ? 'on' : '')} onClick={() => {
+                            <div className={"title " + ((slink === idx && swc) ? 'on' : '')}
+                            onClick={() => {
                                 setSlink(idx);
                                 setSwc(!swc);
                             }
